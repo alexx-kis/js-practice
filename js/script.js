@@ -1,5 +1,25 @@
 'use strict';
 
+/*==================================== sticky header ====================================*/
+/*==================================== sticky header ====================================*/
+
+window.onscroll = function () { makeSticky() };
+
+let header = document.querySelector('.header');
+let main = document.querySelector('.main');
+let sticky = header.offsetTop;
+function makeSticky() {
+	if (window.pageYOffset > sticky) {
+		header.classList.add("header--sticky");
+		main.classList.add('main--sticky');
+	} else {
+		header.classList.remove("header--sticky");
+		main.classList.remove('main--sticky');
+	}
+}
+
+
+
 /*==================================== shapes calculator ====================================*/
 /*==================================== shapes calculator ====================================*/
 
@@ -394,11 +414,65 @@
 			key.textContent = key.textContent.toUpperCase();
 		}
 	});
+})();
 
 
+/*==================================== calendar ====================================*/
+/*==================================== calendar ====================================*/
 
+; (function () {
+	let monthsNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+	let calendarTitle = document.querySelector('.calendar__title');
+	let now = new Date();
+	let currentYear = now.getFullYear();
+	let currentMonth = now.getMonth();
+	let arrowPrev = document.querySelector('.calendar__arrow--prev');
+	let arrowNext = document.querySelector('.calendar__arrow--next');
 
+	function getLastDay(year, month) {
+		return new Date(year, month + 1, 0).getDate();
+	}
 
+	function createCalendar(month, year) {
+		let calendarList = document.querySelector('.calendar__list');
+		let lastMonthDay = getLastDay(year, month);
+		for (let i = 1; i <= lastMonthDay; i++) {
+			let calendarItem = document.createElement('li');
+			calendarItem.classList.add('calendar__item');
+			calendarItem.textContent = i;
+			calendarList.append(calendarItem);
 
+			if (i == now.getDate() && month == now.getMonth()) {
+				calendarItem.classList.add('calendar__item--current');
+			}
+		}
+		calendarTitle.textContent = monthsNames[currentMonth] + ' ' + currentYear;
+	}
+	createCalendar(currentMonth, currentYear);
+
+	arrowPrev.addEventListener('click', function () {
+		let prevMonth = new Date(currentYear, --currentMonth);
+		let prevMonthNum = prevMonth.getMonth();
+		let year = prevMonth.getFullYear();
+		let calendarItems = document.querySelectorAll('.calendar__item');
+		for (let item of calendarItems) {
+			item.remove();
+		}
+		createCalendar(prevMonth.getMonth(), year);
+		calendarTitle.textContent = monthsNames[prevMonthNum] + ' ' + year;
+	});
+
+	
+	arrowNext.addEventListener('click', function () {
+		let nextMonth = new Date(currentYear, ++currentMonth);
+		let nextMonthNum = nextMonth.getMonth();
+		let year = nextMonth.getFullYear();
+		let calendarItems = document.querySelectorAll('.calendar__item');
+		for (let item of calendarItems) {
+			item.remove();
+		}
+		createCalendar(nextMonth.getMonth(), year);
+		calendarTitle.textContent = monthsNames[nextMonthNum] + ' ' + year;
+	});
 })();
