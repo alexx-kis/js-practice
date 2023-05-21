@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>
+		JS Practice
+	</title>
+	<meta http-equiv="Content-type" content='text/html;charset=UTF-8' />
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<h1 class="header__heading">Практические задачи по JS</h1>
+				<nav class="header__menu">
+					<ul class="header__menu-list">
+						<li class="header__menu-item">
+							<a href="#shapes" class="header__menu-link">Калькуляторы фигур</a>
+						</li>
+						<li class="header__menu-item">
+							<a href="#math" class="header__menu-link">Математические калькуляторы</a>
+						</li>
+						<li class="header__menu-item">
+							<a href="#guess-number" class="header__menu-link">Игра "Угадай число"</a>
+						</li>
+						<li class="header__menu-item">
+							<a href="#cells" class="header__menu-link">Игра "Угадай ячейки"</a>
+						</li>
+						<li class="header__menu-item">
+							<a href="#keyboard" class="header__menu-link">Экранная клавиатура</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main class="main">
+
+			<section class="main__shapes shapes" id="shapes">
+				<div class="container">
+					<h2 class="shapes__heading heading">
+						Калькуляторы фигур
+					</h2>
+					<div class="shapes__body">
+						<ul class="shapes__tasks">
+							<!-- SQUARE -->
+							<li class="shapes__tasks-item">
+								<h3 class="shapes__tasks-heading">Площадь и периметр квадрата
+								</h3>
+								<div class="shapes__tasks-input input">
+									<div class="input__title">Введите сторону квадрата:</div>
+									<input type="text" class="input__value" id="square-side" placeholder="a">
+								</div>
+								<button class="shapes__button button" id="square-btn">Рассчитать</button>
+								<div class="shapes__tasks-output output">
+									<div class="output__title">Площадь квадрата равна:</div>
+									<div class="output__value" id="square-area"></div>
+								</div>
+								<div class="shapes__tasks-output output">
+									<div class="output__title">Периметр квадрата равен:</div>
+									<div class="output__value" id="square-perimeter"></div>
+								</div>
+							</li>
+							<!-- RECTANGLE -->
+							<li class="shapes__tasks-item">
+								<h3 class="shapes__tasks-heading">Площадь и периметр прямоугольника
+								</h3>
+								<div class="shapes__tasks-input input">
+									<div class="input__title">Введите стороны прямоугольника:</div>
+									<input type="text" class="input__value" id="rectangle-side1" placeholder="a">
+									<input type="text" class="input__value" id="rectangle-side2" placeholder="b">
+								</div>
+								<button class="shapes__button button" id="rectangle-btn">Рассчитать</button>
+								<div class="shapes__tasks-output output">
+									<div class="output__title">Периметр прямоугольника равен:</div>
+									<div class="output__value" id="rectangle-perimeter"></div>
+								</div>
+								<div class="shapes__tasks-output output">
+									<div class="output__title">Площадь прямоугольника равна:</div>
+									<div class="output__value" id="rectangle-area"></div>
+								</div>
+							</li>
+							<!-- CIRCLE -->
+							<li class="shapes__tasks-item">
+								<h3 class="shapes__tasks-heading">Площадь круга и длина
+									окружности</h3>
+								<div class="shapes__tasks-input input">
+									<div class="input__title">Введите радиус окружности:</div>
+									<input type="text" class="input__value" id="circle-radius" placeholder="r">
+								</div>
+								<button class="shapes__button button" id="circle-btn">Рассчитать</button>
+								<div class="shapes__tasks-output output">
+									<div class="output__title">Площадь круга равна:</div>
+									<div class="output__value" id="circle-area"></div>
+								</div>
+								<div class="shapes__tasks-output output">
+									<div class="output__title">Длина окружности равна:</div>
+									<div class="output__value" id="circle-length"></div>
+								</div>
+							</li>
+							<!-- TRIANGLE -->
+							<li class="shapes__tasks-item">
+								<h3 class="shapes__tasks-heading">Площадь треугольника по трём сторонам
+								</h3>
+								<div class="shapes__tasks-input input">
+									<div class="input__title">Введите стороны треугольника:</div>
+									<input type="text" class="input__value" id="triangle-side1" placeholder="a">
+									<input type="text" class="input__value" id="triangle-side2" placeholder="b">
+									<input type="text" class="input__value" id="triangle-side3" placeholder="c">
+								</div>
+								<button class="shapes__button button" id="triangle-btn">Рассчитать</button>
+								<div class="shapes__tasks-output output">
+									<div class="output__title">Площадь треугольника равна:</div>
+									<div class="output__value" id="triangle-area"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="main__math math" id="math">
+				<div class="container">
+					<h2 class="math__heading heading">Математические калькуляторы</h2>
+					<div class="math__body">
+						<ul class="math__tasks">
+							<li class="math__task">
+								<h3 class="math__task-heading">Найти корни квадратного уравнения</h3>
+								<div class="math__task-input input">
+									<div class="input__title">Введите коэффициенты уравнения:</div>
+									<input type="text" class="input__value" id="coef1">
+									<input type="text" class="input__value" id="coef2">
+									<input type="text" class="input__value" id="coef3">
+								</div>
+								<button class="math__button button" id="square-equation-btn">Найти корни</button>
+								<div class="math__task-output output">
+									<div class="output__title">X<span>1</span>:</div>
+									<div class="output__value" id="root1"></div>
+								</div>
+								<div class="math__task-output output">
+									<div class="output__title">X<span>2</span>:</div>
+									<div class="output__value" id="root2"></div>
+								</div>
+							</li>
+							<li class="math__task">
+								<h3 class="math__task-heading">Проверка чисел на тройку Пифагора</h3>
+								<div class="math__task-input input">
+									<div class="input__title">Введите числа:</div>
+									<input type="text" class="input__value" id="pyth-num1">
+									<input type="text" class="input__value" id="pyth-num2">
+									<input type="text" class="input__value" id="pyth-num3">
+								</div>
+								<button class="math__button button" id="pyth-btn">Проверить</button>
+								<div class="math__task-output output">
+									<div class="output__value" id="pyth-result"></div>
+								</div>
+							</li>
+							<li class="math__task">
+								<h3 class="math__task-heading">Делители числа</h3>
+								<div class="math__task-input input">
+									<div class="input__title">Введите число:</div>
+									<input type="text" class="input__value" id="div-num">
+								</div>
+								<button class="math__button button" id="div-btn">Вывести список делителей</button>
+								<div class="math__task-output output">
+									<div class="output__value" id="div-result"></div>
+								</div>
+							</li>
+							<li class="math__task">
+								<h3 class="math__task-heading">Общие делители</h3>
+								<div class="math__task-input input">
+									<div class="input__title">Введите числа:</div>
+									<input type="text" class="input__value" id="com-div-num1">
+									<input type="text" class="input__value" id="com-div-num2">
+								</div>
+								<button class="math__button button" id="com-div-btn">Вывести список общих
+									делителей</button>
+								<div class="math__task-output output">
+									<div class="output__value" id="com-div-result"></div>
+								</div>
+							</li>
+							<li class="math__task">
+								<h3 class="math__task-heading">Наибольший общий делитель</h3>
+								<div class="math__task-input input">
+									<div class="input__title">Введите числа:</div>
+									<input type="text" class="input__value" id="max-com-div-num1">
+									<input type="text" class="input__value" id="max-com-div-num2">
+								</div>
+								<button class="math__button button" id="max-com-div-btn">Вывести наибольший общий
+									делитель</button>
+								<div class="math__task-output output">
+									<div class="output__value" id="max-com-div-result"></div>
+								</div>
+							</li>
+							<li class="math__task">
+								<h3 class="math__task-heading">Наименьшее общее кратное</h3>
+								<div class="math__task-input input">
+									<div class="input__title">Введите числа:</div>
+									<input type="text" class="input__value" id="min-com-mult-num1">
+									<input type="text" class="input__value" id="min-com-mult-num2">
+								</div>
+								<button class="math__button button" id="min-com-mult-btn">Вывести наибольший общий
+									делитель</button>
+								<div class="math__task-output output">
+									<div class="output__value" id="min-com-mult-result"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="main__guess-number guess-number" id="guess-number">
+				<div class="container">
+					<h2 class="guess-number__heading heading">Игра "Угадай число"</h2>
+					<div class="guess-number__block">
+						<button class="guess-number__generate-button button" id="generate-button">Загадать
+							число</button>
+						<div class="guess-number__input-field">
+							<input type="text" class="guess-number__input input__value"
+								placeholder="Введите число от 1 до 100" id="guess-input">
+						</div>
+						<button class="guess-number__guess-button button" id="guess-button">Угадать</button>
+						<p class="guess-number__output" id="guess-output"></p>
+					</div>
+				</div>
+			</section>
+
+			<section class="main__gues-cells cells" id="cells">
+				<div class="container">
+					<h2 class="cells__heading heading">Игра "Угадай ячейки"</h2>
+					<div class="cells__block">
+						<p class="cells__rules">Компьютер загадал 10 случайных ячеек. Кликая на ячейки, найдите
+							загаданные</p>
+						<div class="cells__controls">
+							<button class="cells__button button" id="set-button">Начать</button>
+							<button class="cells__button button" id="surrender-button"
+								style="display:none">Сдаться</button>
+							<button class="cells__button button" id="repeat-button" style="display:none">Ещё
+								раз</button>
+							<div class="cells__timer-box cells__timer-box--active">
+								У вас осталось <span class="cells__timer">10</span> секунд
+							</div>
+
+
+						</div>
+						<table class="cells__table">
+							<tr class="cells__row">
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+							</tr>
+							<tr class="cells__row">
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+							</tr>
+							<tr class="cells__row">
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+							</tr>
+							<tr class="cells__row">
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+							</tr>
+							<tr class="cells__row">
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+							</tr>
+							<tr class="cells__row">
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+							</tr>
+							<tr class="cells__row">
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+							</tr>
+							<tr class="cells__row">
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+							</tr>
+							<tr class="cells__row">
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+							</tr>
+							<tr class="cells__row">
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+								<td class="cells__cell"></td>
+							</tr>
+						</table>
+						<div class="cells__output" style="display:none"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="main__keyboard keyboard" id="keyboard">
+				<div class="container">
+					<h2 class="keyboard__heading heading">Экранная клавиатура</h2>
+					<div class="keyboard__inner">
+						<div class="keyboard__row">
+						</div>
+						<div class="keyboard__row">
+						</div>
+						<div class="keyboard__row">
+						</div>
+						<div class="keyboard__row">
+						</div>
+						<div class="keyboard__row">
+						</div>
+					</div>
+					<div class="keyboard__input-field">
+						<input type="text" class="keyboard__input">
+					</div>
+				</div>
+			</section>
+
+		</main>
+	</div>
+</body>
+
+<script src="/js/script.js"></script>
+
+</html>
