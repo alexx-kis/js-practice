@@ -372,71 +372,25 @@
 /*==================================== keyboard ====================================*/
 
 ; (function () {
-
-	let hrows = document.querySelectorAll('.keyboard__row');
 	let output = document.querySelector('.keyboard__input');
+	let keys = document.querySelectorAll('.keyboard__key');
 
-	let keys = [
-		['par', 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, '-', '=', 'backspace'],
-		['tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '|'],
-		['capslock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", 'enter'],
-		['shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', 'shift'],
-		['fn', '⌃', '⌥', '⌘', ' ', '⌘', '⌥', 'arleft', 'aru/pdn', 'arrig']
-	]
-
-
-	for (let i = 0; i < keys.length; i++) {
-		for (let j = 0; j < keys[i].length; j++) {
-			let key = document.createElement('div');
-			key.classList.add('keyboard__key');
-			key.textContent = keys[i][j];
-			hrows[i].append(key);
-		}
-	}
-
-	let keyboardKeys = document.querySelectorAll('.keyboard__key');
-
-	for (let key of keyboardKeys) {
-		if (key.textContent == 'tab') {
-			key.classList.add('keyboard__keys-tab');
-		}
-		if (key.textContent == 'capslock') {
-			key.classList.add('keyboard__keys-capslock');
-			key.textContent.toUpperCase();
-		}
-		if (key.textContent == 'shift') {
-			key.classList.add('keyboard__keys-shift');
-		}
-		if (key.textContent == 'enter') {
-			key.classList.add('keyboard__keys-enter');
-		}
-		if (key.textContent == ' ') {
-			key.classList.add('keyboard__keys-space');
-		}
-		if (key.textContent == 'backspace') {
-			key.classList.add('keyboard__keys-backspace');
-			key.addEventListener('click', function () {
-				output.value.slice(0, -1);
-			});
-		}
-
+	for (let key of keys) {
 		key.addEventListener('click', function () {
 			output.value += key.textContent;
-			if (key.textContent == 'backspace' || key.textContent == 'BACKSPACE') {
-				output.value = output.value.slice(0, -10);
+			if (key.textContent == '⌫') {
+				output.value = output.value.slice(0, -2);
 			}
-			if (key.textContent == 'capslock' || key.textContent == 'CAPSLOCK') {
-				// output.value = output.value.slice(0);
-				output.value = output.value.replace('CAPSLOCK', '');
-				output.value = output.value.replace('capslock', '');
+			if (key.textContent == '⇪') {
+				output.value = output.value.replace('⇪', '');
 			}
 		});
 	}
 
-	let capslock = document.querySelector('.keyboard__keys-capslock');
+	let capslock = document.querySelector('.keyboard__key--capslock');
+
 	capslock.addEventListener('click', function () {
-		
-		for (let key of keyboardKeys) {
+		for (let key of keys) {
 			key.textContent = key.textContent.toUpperCase();
 		}
 	});

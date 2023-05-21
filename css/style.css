@@ -378,8 +378,7 @@ h3 {
   margin-bottom: 50px;
 }
 .keyboard__inner {
-  height: 293px;
-  width: 862px;
+  max-width: 860px;
   margin: 0 auto 40px;
 }
 .keyboard__row {
@@ -415,27 +414,39 @@ h3 {
       -ms-transform: scale(0.8);
           transform: scale(0.8);
 }
-.keyboard__keys-tab {
+.keyboard__key--tab {
   width: 70px;
 }
-.keyboard__keys-capslock {
+.keyboard__key--capslock {
   width: 90px;
 }
-.keyboard__keys-shift {
+.keyboard__key--shift {
   width: 120px;
 }
-.keyboard__keys-enter {
+.keyboard__key--enter {
   width: 90px;
 }
-.keyboard__keys-backspace {
+.keyboard__key--backspace {
   width: 70px;
 }
-.keyboard__keys-space {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+.keyboard__key--space {
+  width: 312px;
+}
+.keyboard__key--arrows {
+  margin-bottom: 10px;
+}
+.keyboard__key--arrows-small {
+  border: 1px solid #000;
+  border-radius: 5px;
+  height: 25px;
+  margin-bottom: 0;
+}
+.keyboard__input-field {
+  max-width: 860px;
+  margin: 0 auto;
 }
 .keyboard__input {
+  padding: 6px 0;
   border: 1px solid black;
   width: 100%;
   text-align: center;

@@ -343,15 +343,13 @@ h3 {
 	margin-bottom: 50px;
 
 	&__inner {
-		height: 293px;
-		width: 862px;
+		max-width: 860px;
 		margin: 0 auto 40px;
 
 	}
 
 	&__row {
 		display: flex;
-		// justify-content: space-between;
 		align-items: center;
 	}
 
@@ -372,33 +370,55 @@ h3 {
 		}
 	}
 
-	&__keys-tab {
+	&__key--tab {
 		width: 70px;
 	}
 
-	&__keys-capslock {
+	&__key--capslock {
 		width: 90px;
 	}
 
-	&__keys-shift {
+	&__key--shift {
 		width: 120px;
 	}
 
-	&__keys-enter {
+	&__key--enter {
 		width: 90px;
 	}
 
-	&__keys-backspace {
+	&__key--backspace {
 		width: 70px;
 	}
 
-	&__keys-space {
-		flex: 1 1 auto;
+	&__key--space {
+		width: 312px;
 	}
 
-	&__input-field {}
+	&__key--arrows  {
+		margin-bottom: 10px;
+	}
+	&__key--arrows-small  {
+		// border-top: 1px solid #000;
+		// border-bottom: 1px solid #000;
+		border: 1px solid #000;
+		border-radius: 5px;
+		// width: 100%;
+		// height: 100%;
+		height: 25px;
+		margin-bottom: 0;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+
+	}
+
+	&__input-field {
+		max-width: 860px;
+		margin: 0 auto;
+	}
 
 	&__input {
+		padding: 6px 0;
 		border: 1px solid black;
 		width: 100%;
 		text-align: center;
