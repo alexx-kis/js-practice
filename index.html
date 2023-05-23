@@ -12,34 +12,61 @@
 
 <body>
 	<div class="wrapper">
-		<h1 class="heading">Практические задачи по JS</h1>
 
+		<div class="overlay"></div>
 		<header class="header">
 			<div class="container">
-				<nav class="header__menu">
-					<ul class="header__menu-list">
-						<li class="header__menu-item">
-							<a href="#shapes" class="header__menu-link">Калькуляторы фигур</a>
-						</li>
-						<li class="header__menu-item">
-							<a href="#math" class="header__menu-link">Математические калькуляторы</a>
-						</li>
-						<li class="header__menu-item">
-							<a href="#guess-number" class="header__menu-link">Игра "Угадай число"</a>
-						</li>
-						<li class="header__menu-item">
-							<a href="#cells" class="header__menu-link">Игра "Угадай ячейки"</a>
-						</li>
-						<li class="header__menu-item">
-							<a href="#keyboard" class="header__menu-link">Экранная клавиатура</a>
-						</li>
-						<li class="header__menu-item">
-							<a href="#calendar" class="header__menu-link">Линейный календарь</a>
-						</li>
-					</ul>
-				</nav>
+				<div class="header__inner">
+					<h1 class="header__heading main-heading">Практические задачи по JS</h1>
+				</div>
 			</div>
 		</header>
+		<div class="burger">
+			<div class="burger__line"></div>
+			<div class="burger__line"></div>
+			<div class="burger__line"></div>
+		</div>
+
+
+		<aside class="aside">
+			<nav class="aside__menu">
+				<ul class="aside__menu-list">
+					<li class="aside__menu-item">
+						<a href="#" class="aside__menu-link">Наверх</a>
+					</li>
+					<li class="aside__menu-item">
+						<a href="#shapes" class="aside__menu-link">Калькуляторы фигур</a>
+					</li>
+					<li class="aside__menu-item">
+						<a href="#math" class="aside__menu-link">Математические калькуляторы</a>
+					</li>
+					<li class="aside__menu-item">
+						<a href="#guess-number" class="aside__menu-link">Игра "Угадай число"</a>
+					</li>
+					<li class="aside__menu-item">
+						<a href="#cells" class="aside__menu-link">Игра "Угадай ячейки"</a>
+					</li>
+					<li class="aside__menu-item">
+						<a href="#keyboard" class="aside__menu-link">Экранная клавиатура</a>
+					</li>
+					<li class="aside__menu-item">
+						<a href="#calendar" class="aside__menu-link">Линейный календарь</a>
+					</li>
+					<li class="aside__menu-item">
+						<a href="#autocomplete" class="aside__menu-link">Автодополнение</a>
+					</li>
+					<li class="aside__menu-item">
+						<a href="#spoiler" class="aside__menu-link">Спойлер</a>
+					</li>
+					<li class="aside__menu-item">
+						<a href="#tabs" class="aside__menu-link">Вкладки</a>
+					</li>
+					<li class="aside__menu-item">
+						<a href="#acc" class="aside__menu-link">Аккордеон</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
 
 		<main class="main">
 
@@ -206,8 +233,8 @@
 									<input type="text" class="input__value" id="min-com-mult-num1">
 									<input type="text" class="input__value" id="min-com-mult-num2">
 								</div>
-								<button class="math__button button" id="min-com-mult-btn">Вывести наибольший общий
-									делитель</button>
+								<button class="math__button button" id="min-com-mult-btn">Вывести наименьшее общее
+									кратное</button>
 								<div class="math__task-output output">
 									<div class="output__value" id="min-com-mult-result"></div>
 								</div>
@@ -481,13 +508,129 @@
 				</div>
 			</section>
 
-			<section class="main__autocomplete autocomplete">
+			<section class="main__autocomplete autocomplete" id="autocomplete">
 				<div class="container">
 					<div class="autocomplete__heading heading">Автодополнение</div>
 					<div class="autocomplete__inner">
 						<p class="autocomplete__title">Введите название страны</p>
 						<input type="text" class="autocomplete__input">
 						<ul class="autocomplete__list"></ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="main__spoiler spoiler" id="spoiler">
+				<div class="container">
+					<h2 class="spoiler__heading heading">Спойлер</h2>
+					<div class="spoiler__inner">
+						<p class="spoiler__par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, maiores!
+						</p>
+						<p class="spoiler__par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque?
+							<a href="#" class="spoiler__toggle">Show spoiler 1</a>
+						</p>
+						<p class="spoiler__spoiler">Hidden spoiler 1</p>
+						<p class="spoiler__par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+							optio?</p>
+						<p class="spoiler__par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, est.
+							<a href="3" class="spoiler__toggle">Show spoiler 2</a>
+						</p>
+						<p class="spoiler__spoiler">Hidden spoiler 2</p>
+						<p class="spoiler__par">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium,
+							eaque!</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="main__tabs tabs" id="tabs">
+				<div class="container">
+					<h2 class="tabs__heading heading">Вкладки</h2>
+					<div class="tabs__inner">
+						<div class="tabs__menu">
+							<a href="" class="tabs__link tabs__link--active">вкладка 1</a>
+							<a href="" class="tabs__link">вкладка 2</a>
+							<a href="" class="tabs__link">вкладка 3</a>
+						</div>
+						<div class="tabs__tabs">
+							<div class="tabs__tab tabs__tab--active">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eaque qui incidunt
+								natus voluptas expedita, dolor facilis? Aspernatur quisquam molestias in eius ducimus
+								porro autem doloribus inventore explicabo molestiae maxime modi quaerat blanditiis
+								voluptas deleniti illum, rerum accusamus culpa vero earum laudantium eos quae obcaecati?
+								Enim qui nisi at similique?
+							</div>
+							<div class="tabs__tab">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex doloremque officia nisi
+								magni quasi illo quos ut saepe velit eius et sunt sequi quisquam veritatis mollitia a,
+								id tenetur in ipsa at quidem provident voluptatum! Itaque voluptate debitis molestias
+								aut velit dolorem error, quaerat sapiente sit a asperiores. Modi, pariatur.
+							</div>
+							<div class="tabs__tab">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate neque accusantium
+								vero commodi sunt? Dolorum accusamus error fugit est aut quo quisquam reiciendis aperiam
+								dicta voluptas voluptatibus nisi quaerat impedit, amet, suscipit ut quod incidunt
+								molestias accusantium. Architecto a eius ea, ad nesciunt quae quasi numquam dicta nihil,
+								vitae tempore!
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="main__acc acc" id="acc">
+				<div class="container">
+					<h2 class="acc__heading heading">Аккордеон</h2>
+					<div class="acc__inner">
+						<div class="acc__tab acc__tab--active">
+							<div class="acc__link">
+								<a href="#">Tab 1</a>
+								<div class="acc__button">
+									<div class="acc__button-line"></div>
+									<div class="acc__button-line acc__button-line--vert"></div>
+								</div>
+							</div>
+							<div class="acc__content">
+								<div class="acc__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Consequatur odit blanditiis quaerat nihil ab, debitis doloremque in tenetur eveniet
+									rerum voluptate quis tempore, maxime possimus quo perferendis. Sint, doloremque
+									facere iure porro ducimus, accusamus minima ex impedit eos blanditiis, animi
+									consectetur magnam. Sint, accusantium. Tenetur laboriosam mollitia sed aperiam
+									facilis.</div>
+							</div>
+						</div>
+						<div class="acc__tab">
+							<div class="acc__link">
+								<a href="#">Tab 2</a>
+								<div class="acc__button">
+									<div class="acc__button-line"></div>
+									<div class="acc__button-line acc__button-line--vert"></div>
+								</div>
+							</div>
+							<div class="acc__content">
+								<div class="acc__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+									facere quod repellat provident repellendus molestiae ipsa quisquam quaerat nihil
+									obcaecati voluptatum, perferendis aspernatur doloribus quam natus corrupti ut maxime
+									earum accusamus, dignissimos deleniti asperiores enim nisi sit! Soluta dicta
+									provident eveniet fugit. Numquam sapiente recusandae pariatur iusto fugit ab
+									corporis!</div>
+							</div>
+						</div>
+						<div class="acc__tab">
+							<div class="acc__link">
+								<a href="#">Tab 3</a>
+								<div class="acc__button">
+									<div class="acc__button-line"></div>
+									<div class="acc__button-line acc__button-line--vert"></div>
+								</div>
+							</div>
+							<div class="acc__content">
+								<div class="acc__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Pariatur, iusto! Deleniti cupiditate rerum, non beatae itaque ex adipisci
+									repudiandae. Illum perferendis eum in consectetur? At, alias labore. Totam maxime
+									accusantium quod dignissimos eveniet numquam, veritatis soluta quo adipisci
+									cupiditate cum iusto ipsam id beatae animi reiciendis aperiam ducimus commodi
+									officia?</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
