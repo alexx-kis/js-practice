@@ -22,7 +22,7 @@ body {
 .container {
 	height: 100%;
 	max-width: 1200px;
-	padding: 0 50px;
+	padding: 0 298px 0 40px;
 	margin: 0 auto;
 }
 
@@ -31,6 +31,13 @@ body {
 	font-size: 28px;
 	line-height: 1.2;
 	margin-bottom: 20px;
+}
+
+.main-heading {
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 40px;
 }
 
 .button {
@@ -44,7 +51,7 @@ body {
 	}
 
 	&:hover {
-		color: rgb(176, 0, 0);
+		color: #7137a4;
 	}
 
 	background: #8ad288;
@@ -57,50 +64,61 @@ h3 {
 	font-weight: 700;
 }
 
-.main--sticky {
-	padding-top: 64px;
+.burger {
+	display: none;
 }
 
-.heading {
-	font-size: 50px;
-	text-align: center;
-	margin-bottom: 50px;
-	margin-top: 40px;
-}
+// .main--sticky {
+
+// }
+
+
 
 /*==================================== HEADER ====================================*/
 /*==================================== HEADER ====================================*/
 
 .header {
+	padding: 20px 0;
 
+	z-index: 3;
+}
+
+
+/*==================================== ASIDE ====================================*/
+/*==================================== ASIDE ====================================*/
+
+
+.aside {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	transition: all .3s;
 
 	&__menu {
-		margin-bottom: 30px;
-	}
-
-	&--sticky {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		left: 0;
-		z-index: 2;
+		height: 100%;
 	}
 
 	&__menu-list {
+		height: 100%;
 		display: flex;
+		flex-direction: column;
 		justify-content: space-evenly;
+		align-items: center;
 		background: #7fbe7b;
 	}
 
 	&__menu-item {
-		padding: 10px;
+		padding: 10px 20px;
 	}
 
 	&__menu-link {
 		transition: all .3s;
+		color: #000;
+		font-weight: 700;
 
 		&:hover {
-			color: rgb(176, 0, 0);
+			color: #7137a4;
 		}
 	}
 }
@@ -167,6 +185,7 @@ h3 {
 
 .output {
 	display: flex;
+	align-items: center;
 	flex-wrap: wrap;
 	margin-bottom: 10px;
 
@@ -223,7 +242,7 @@ h3 {
 /*==================================== GUESS NUMBER ====================================*/
 
 .guess-number {
-	padding: 40px;
+	padding: 40px 0;
 
 	&__heading {}
 
@@ -285,7 +304,7 @@ h3 {
 	}
 
 	&__controls {
-		width: 324px;
+		max-width: 324px;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -446,7 +465,9 @@ h3 {
 .calendar {
 	padding: 50px 0;
 
-	&__heading {}
+	&__heading {
+		margin-bottom: 40px;
+	}
 
 	&__title {
 		font-size: 22px;
@@ -455,7 +476,7 @@ h3 {
 	&__title-box {
 		position: relative;
 		height: 20px;
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 	}
 
 	&__arrows {
@@ -491,7 +512,7 @@ h3 {
 		text-align: center;
 		border: 1px solid black;
 		border-radius: 10px;
-		margin-right: 10px;
+		// margin-right: 10px;
 
 		&:last-child {
 			margin-right: 0;
@@ -519,7 +540,7 @@ h3 {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		// position: relative;
+		position: relative;
 	}
 
 	&__title {
@@ -536,11 +557,10 @@ h3 {
 	}
 
 	&__list {
-		// position: absolute;
+		position: absolute;
 		margin: 0;
 		padding: 0;
-		top: 73px;
-		left: 450px;
+		top: 72px;
 		list-style-type: none;
 		background-color: #fff;
 		width: 200px;
@@ -553,3 +573,202 @@ h3 {
 		padding: 5px;
 	}
 }
+
+
+/*==================================== SPOILER ====================================*/
+/*==================================== SPOILER ====================================*/
+
+
+.spoiler {
+	padding: 50px 0;
+
+	&__heading {}
+
+	&__inner {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	&__par {
+		font-size: 20px;
+		padding: 10px;
+	}
+
+	&__spoiler {
+		background: #13c67b;
+		// padding: 15px;
+		text-align: center;
+		color: #fff;
+		// display: none;
+		height: 0;
+		transition: all .3s;
+		line-height: 46px;
+		visibility: hidden;
+		opacity: 0;
+
+		&--active {
+			// display: block;
+			visibility: visible;
+			opacity: 1;
+			height: 46px;
+		}
+	}
+
+
+
+	&__toggle {
+		font-size: 18px;
+		text-decoration: underline;
+		color: #21526e;
+	}
+}
+
+
+/*==================================== TABS ====================================*/
+/*==================================== TABS ====================================*/
+
+.tabs {
+	padding: 50px 0;
+
+	&__inner {
+		margin: 0 auto;
+		max-width: 400px;
+	}
+
+	&__menu {}
+
+	&__link {
+		margin-right: 5px;
+		display: inline-block;
+		padding: 10px;
+		color: black;
+		text-decoration: none;
+		border: 1px solid gray;
+		border-radius: 10px 10px 0 0;
+		transition: all .3s;
+
+		&:hover {
+			background: #f8f8f8;
+		}
+
+		&--active {
+			border-color: transparent;
+			background: #f2f2f2;
+		}
+	}
+
+	&__tabs {
+		min-height: 300px;
+		position: relative;
+	}
+
+	&__tab {
+		padding: 20px;
+		background: #f2f2f2;
+		// height: 300px;
+		// display: none;
+		visibility: hidden;
+		opacity: 0;
+		line-height: 1.5;
+		position: absolute;
+		transition: all .3s;
+		max-width: 400px;
+		min-height: 300px;
+
+		&--active {
+			// display: block;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+
+/*==================================== ACCORDION ====================================*/
+/*==================================== ACCORDION ====================================*/
+
+.acc {
+	padding: 50px 0 400px;
+
+	&__inner {
+		margin: 0 auto;
+		max-width: 400px;
+	}
+
+	&__tab {
+		margin-bottom: 10px;
+
+		&--active {
+			.acc__content {
+				height: 200px;
+			}
+			.acc__button-line--vert {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px;
+		color: black;
+		text-decoration: none;
+		text-align: center;
+		background: #f8f8f8;
+		border: 1px solid gray;
+		transition: all .3s;
+
+		&:hover {
+			background: #f2f2f2;
+		}
+
+		&:active {
+			transform: scale(0.9);
+		}
+	}
+
+	&__button {
+		width: 20px;
+		height: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		border-radius: 50%;
+		transition: all .3s;
+		&:hover {
+			background: #d5d5d5;
+		}
+
+		&-line {
+			width: 10px;
+			height: 2px;
+			background: #000;
+
+
+			&--vert {
+				transition: all .3s;
+				transform: rotate(90deg);
+				position: absolute;
+			}
+		}
+	}
+
+	&__content {
+		height: 0;
+		overflow-x: hidden;
+		transition: all .3s;
+		line-height: 1.5;
+	}
+
+	&__text {
+		border: 1px dashed gray;
+		border-top: none;
+		padding: 10px;
+	}
+}
+
+@import "media";
