@@ -512,14 +512,99 @@ function makeSticky() {
 			list.style.display = 'none';
 		}
 	});
+})();
 
 
 
+/*==================================== spoiler ====================================*/
+/*==================================== spoiler ====================================*/
 
+; (function () {
+	let showLinks = document.querySelectorAll('.spoiler__toggle');
 
-
-
-
-
+	showLinks.forEach(function (link) {
+		link.addEventListener('click', function (e) {
+			e.preventDefault();
+			this.parentElement.nextElementSibling.classList.toggle('spoiler__spoiler--active');
+		});
+	})
 
 })();
+
+
+/*==================================== tabs ====================================*/
+/*==================================== tabs ====================================*/
+
+; (function () {
+
+	let links = document.querySelectorAll('.tabs__link');
+	let tabs = document.querySelectorAll('.tabs__tab');
+
+	for (let i = 0; i < links.length; i++) {
+		links[i].addEventListener('click', function (e) {
+			e.preventDefault();
+			document.querySelector('.tabs__link--active').classList.remove('tabs__link--active');
+			document.querySelector('.tabs__tab--active').classList.remove('tabs__tab--active');
+			this.classList.add('tabs__link--active');
+			tabs[i].classList.add('tabs__tab--active');
+		});
+	}
+})();
+
+
+//*==================================== accordion ====================================*/
+//*==================================== accordion ====================================*/
+
+; (function () {
+
+	let links = document.querySelectorAll('.acc__link');
+
+	for (let link of links) {
+		link.addEventListener('click', function (e) {
+			e.preventDefault();
+
+			let open = document.querySelector('.acc__tab--active');
+
+			if (this.parentElement.classList.contains('acc__tab--active')) {
+				this.parentElement.classList.remove('acc__tab--active');
+			}
+			else {
+				this.parentElement.classList.add('acc__tab--active');
+				if (open) {
+					open.classList.remove('acc__tab--active');
+				}
+			}
+		})
+	}
+
+})();
+
+
+/*==================================== burger ====================================*/
+/*==================================== burger ====================================*/
+
+let burger = document.querySelector('.burger');
+let aside = document.querySelector('.aside');
+let overlay = document.querySelector('.overlay');
+
+let asideLinks = document.querySelectorAll('.aside a');
+
+burger.addEventListener('click', function () {
+	aside.classList.toggle('aside--open');
+	burger.classList.toggle('burger--active');
+	overlay.classList.toggle('overlay--show');
+});
+
+for (let link of asideLinks) {
+	link.addEventListener('click', function () {
+		aside.classList.remove('aside--open');
+		burger.classList.remove('burger--active');
+		overlay.classList.remove('overlay--show');
+	})
+}
+
+overlay.addEventListener('click', function () {
+	aside.classList.remove('aside--open');
+	burger.classList.remove('burger--active');
+	overlay.classList.remove('overlay--show');
+})
