@@ -2,27 +2,7 @@
 /*==================================== MEDIA ====================================*/
 
 @media (max-width: 1200px) {
-	.shapes {
-		&__tasks {
-			grid-template: repeat(4, 1fr) / 1fr;
-			justify-items: center;
 
-			&-item {
-				width: 100%;
-			}
-		}
-	}
-
-	.math {
-		&__tasks {
-			grid-template: repeat(4, 1fr) / 1fr;
-			justify-items: center;
-		}
-
-		&__task {
-			width: 100%;
-		}
-	}
 
 	.calendar {
 		&__list {
@@ -43,29 +23,36 @@
 @media (max-width: 1000px) {
 
 	.header {
-		transition: all .3s;
-	}
+		&__menu {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			height: 100%;
+			min-width: 280px;
+			transform: translateX(100%);
+			transition: all .3s;
 
-	.header--sticky {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		left: 0;
-		background: #fff;
-		box-shadow: 0px 0px 20px 1px #e3e3e3;
-	}
+			&--open {
+				transform: translateX(0%);
+				z-index: 51;
+			}
+		}
 
-	.main--sticky {
-		padding-top: 90px;
+		&__menu-list {
+			flex-direction: column;
+		}
 	}
-
 
 	.main-heading {
 		margin: 0;
 		padding: 0 60px 0 20px;
-		text-align: left;
 		height: 50px;
 		line-height: 50px;
+	}
+
+	.main--sticky {
+		padding-top: 90px;
 	}
 
 	.burger {
@@ -112,29 +99,44 @@
 		visibility: hidden;
 		opacity: 0;
 		transition: all .3s;
-	}
 
-	.overlay--show {
-		visibility: visible;
-		opacity: 1;
+		&--show {
+			visibility: visible;
+			opacity: 1;
+		}
 	}
 
 	.container {
 		padding: 0 30px;
 	}
 
-	.aside {
-		z-index: 51;
-		transform: translateX(100%);
+}
 
-		&--open {
-			transform: translate(0%);
+/*==================================== 900 ====================================*/
+
+@media (max-width: 900px) {
+	.shapes {
+		&__tasks {
+			grid-template: repeat(4, 1fr) / 1fr;
+			justify-items: center;
+
+			&-item {
+				width: 100%;
+			}
 		}
 	}
 
+	.math {
+		&__tasks {
+			grid-template: repeat(4, 1fr) / 1fr;
+			justify-items: center;
+		}
 
+		&__task {
+			width: 100%;
+		}
+	}
 }
-
 
 /*==================================== 850 ====================================*/
 
@@ -157,9 +159,6 @@
 /*==================================== 660 ====================================*/
 
 @media (max-width: 660px) {
-	.main-heading {
-		font-size: 35px;
-	}
 
 	.keyboard {
 		&__key {
@@ -177,12 +176,8 @@
 /*==================================== 600 ====================================*/
 
 @media (max-width: 600px) {
-	.main--sticky {
-		padding-top: 140px;
-	}
 
 	.main-heading {
-		height: 100px;
 		font-size: 40px;
 		text-align: center;
 	}
@@ -192,10 +187,6 @@
 /*==================================== 540 ====================================*/
 
 @media (max-width: 540px) {
-	.burger {
-		top: 50px;
-	}
-
 	.calendar {
 		&__list {
 			grid-template: repeat(4, 1fr) / repeat(7, 1fr);
@@ -223,6 +214,7 @@
 
 		&__key--arrows {
 			margin-bottom: 5px;
+
 			&-small {
 				margin-bottom: 0;
 			}
@@ -230,12 +222,35 @@
 	}
 }
 
+/*==================================== 500 ====================================*/
+
+@media (max-width: 500px) {
+	.main-heading {
+		font-size: 35px;
+
+	}
+}
+
+
+/*==================================== 450 ====================================*/
+
+@media (max-width: 450px) {
+	.main-heading {
+		display: none;
+		&--small {
+			display: block;
+		}
+	}
+}
 
 /*==================================== 420 ====================================*/
 
 @media (max-width: 420px) {
-	.main-heading {
-		font-size: 30px;
+
+	.header {
+		&__menu {
+			min-width: 100%;
+		}
 	}
 
 	.cells {
@@ -249,5 +264,13 @@
 		.container {
 			padding: 0 10px;
 		}
+	}
+}
+
+/*==================================== 320 ====================================*/
+
+@media (max-width: 320px) {
+	.main-heading {
+		font-size: 27px;
 	}
 }

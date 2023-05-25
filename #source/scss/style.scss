@@ -1,5 +1,6 @@
 @import "reset";
 @import "mixins";
+@import "vars";
 
 html {
 	scroll-behavior: smooth;
@@ -22,7 +23,7 @@ body {
 .container {
 	height: 100%;
 	max-width: 1200px;
-	padding: 0 298px 0 40px;
+	padding: 0 40px;
 	margin: 0 auto;
 }
 
@@ -36,8 +37,11 @@ body {
 .main-heading {
 	font-size: 50px;
 	text-align: center;
-	margin-bottom: 50px;
-	margin-top: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	&--small {
+		display: none;
+	}
 }
 
 .button {
@@ -54,7 +58,7 @@ body {
 		color: #7137a4;
 	}
 
-	background: #8ad288;
+	background: $green-color;
 }
 
 h3 {
@@ -68,9 +72,9 @@ h3 {
 	display: none;
 }
 
-// .main--sticky {
-
-// }
+.main--sticky {
+	padding-top: 180px;
+}
 
 
 
@@ -79,49 +83,40 @@ h3 {
 
 .header {
 	padding: 20px 0;
-
 	z-index: 3;
-}
+	background: #fff;
+	box-shadow: 0px 0px 20px 1px #e3e3e3;
 
-
-/*==================================== ASIDE ====================================*/
-/*==================================== ASIDE ====================================*/
-
-
-.aside {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	transition: all .3s;
+	.container {
+		max-width: 1920px;
+	}
 
 	&__menu {
-		height: 100%;
+		height: 50px;
+		background: $green-color;
 	}
 
 	&__menu-list {
 		height: 100%;
 		display: flex;
-		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
-		background: #7fbe7b;
 	}
 
 	&__menu-item {
-		padding: 10px 20px;
+		padding: 10px;
+		text-align: center;
 	}
 
 	&__menu-link {
-		transition: all .3s;
-		color: #000;
-		font-weight: 700;
+	}
 
-		&:hover {
-			color: #7137a4;
-		}
+	&--sticky {
+		position: fixed;
+		width: 100%;
 	}
 }
+
 
 
 /*==================================== SHAPES ====================================*/
@@ -709,6 +704,7 @@ h3 {
 	}
 
 	&__link {
+		cursor: pointer;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

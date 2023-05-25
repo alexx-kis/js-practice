@@ -583,28 +583,30 @@ function makeSticky() {
 /*==================================== burger ====================================*/
 /*==================================== burger ====================================*/
 
-let burger = document.querySelector('.burger');
-let aside = document.querySelector('.aside');
-let overlay = document.querySelector('.overlay');
-
-let asideLinks = document.querySelectorAll('.aside a');
-
-burger.addEventListener('click', function () {
-	aside.classList.toggle('aside--open');
-	burger.classList.toggle('burger--active');
-	overlay.classList.toggle('overlay--show');
-});
-
-for (let link of asideLinks) {
-	link.addEventListener('click', function () {
-		aside.classList.remove('aside--open');
+; (function () {
+	let burger = document.querySelector('.burger');
+	let menu = document.querySelector('.header__menu');
+	let overlay = document.querySelector('.overlay');
+	
+	let menuLinks = document.querySelectorAll('.header__menu a');
+	
+	burger.addEventListener('click', function () {
+		menu.classList.toggle('header__menu--open');
+		burger.classList.toggle('burger--active');
+		overlay.classList.toggle('overlay--show');
+	});
+	
+	for (let link of menuLinks) {
+		link.addEventListener('click', function () {
+			menu.classList.remove('header__menu--open');
+			burger.classList.remove('burger--active');
+			overlay.classList.remove('overlay--show');
+		})
+	}
+	
+	overlay.addEventListener('click', function () {
+		menu.classList.remove('header__menu--open');
 		burger.classList.remove('burger--active');
 		overlay.classList.remove('overlay--show');
 	})
-}
-
-overlay.addEventListener('click', function () {
-	aside.classList.remove('aside--open');
-	burger.classList.remove('burger--active');
-	overlay.classList.remove('overlay--show');
-})
+})();
