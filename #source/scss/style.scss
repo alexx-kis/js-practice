@@ -55,7 +55,7 @@ body {
 	}
 
 	&:hover {
-		color: #7137a4;
+		color: $hover-color;
 	}
 
 	background: $green-color;
@@ -109,6 +109,10 @@ h3 {
 	}
 
 	&__menu-link {
+		transition: all .3s;
+		&:hover {
+			color: $hover-color;
+		}
 	}
 
 	&--sticky {
@@ -371,7 +375,6 @@ h3 {
 	&__inner {
 		max-width: 860px;
 		margin: 0 auto 40px;
-
 	}
 
 	&__row {
@@ -390,9 +393,11 @@ h3 {
 		border-radius: 5px;
 		cursor: pointer;
 		transition: all .3s;
-
+		
 		&:active {
 			transform: scale(0.8);
+			background: $hover-color;
+
 		}
 	}
 
@@ -590,10 +595,10 @@ h3 {
 	}
 
 	&__spoiler {
-		background: #13c67b;
+		background: $green-color;
 		// padding: 15px;
 		text-align: center;
-		color: #fff;
+		color: #000;
 		// display: none;
 		height: 0;
 		transition: all .3s;

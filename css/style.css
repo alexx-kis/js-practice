@@ -184,6 +184,14 @@ h3 {
   padding: 10px;
   text-align: center;
 }
+.header__menu-link {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header__menu-link:hover {
+  color: #7137a4;
+}
 .header--sticky {
   position: fixed;
   width: 100%;
@@ -439,6 +447,7 @@ h3 {
   -webkit-transform: scale(0.8);
       -ms-transform: scale(0.8);
           transform: scale(0.8);
+  background: #7137a4;
 }
 .keyboard__key--tab {
   width: 70px;
@@ -605,9 +614,9 @@ h3 {
   padding: 10px;
 }
 .spoiler__spoiler {
-  background: #13c67b;
+  background: #8ad288;
   text-align: center;
-  color: #fff;
+  color: #000;
   height: 0;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
