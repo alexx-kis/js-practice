@@ -126,7 +126,7 @@ body a {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   margin-bottom: 20px;
-  background: #8ad288;
+  background: #a980cd;
 }
 .button:active {
   -webkit-transform: scale(0.9);
@@ -134,7 +134,7 @@ body a {
           transform: scale(0.9);
 }
 .button:hover {
-  color: #7137a4;
+  color: #8ad288;
 }
 
 h3 {
@@ -190,7 +190,7 @@ h3 {
   transition: all 0.3s;
 }
 .header__menu-link:hover {
-  color: #7137a4;
+  color: #a980cd;
 }
 .header--sticky {
   position: fixed;
@@ -447,7 +447,7 @@ h3 {
   -webkit-transform: scale(0.8);
       -ms-transform: scale(0.8);
           transform: scale(0.8);
-  background: #7137a4;
+  background: #a980cd;
 }
 .keyboard__key--tab {
   width: 70px;
