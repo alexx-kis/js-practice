@@ -39,6 +39,7 @@ body {
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
+
 	&--small {
 		display: none;
 	}
@@ -73,7 +74,7 @@ h3 {
 }
 
 .main--sticky {
-	padding-top: 180px;
+	// padding-top: 180px;
 }
 
 
@@ -86,6 +87,8 @@ h3 {
 	z-index: 3;
 	background: #fff;
 	box-shadow: 0px 0px 20px 1px #e3e3e3;
+	position: absolute;
+	width: 100%;
 
 	.container {
 		max-width: 1920px;
@@ -110,6 +113,7 @@ h3 {
 
 	&__menu-link {
 		transition: all .3s;
+
 		&:hover {
 			color: $hover-color;
 		}
@@ -128,7 +132,7 @@ h3 {
 
 
 .shapes {
-	padding: 40px 0;
+	padding: 200px 0 0 0;
 	margin-bottom: 30px;
 
 	&__heading {}
@@ -205,7 +209,7 @@ h3 {
 /*==================================== MATH ====================================*/
 
 .math {
-	padding: 40px 0;
+	padding: 180px 0 0;
 
 	&__heading {}
 
@@ -241,7 +245,7 @@ h3 {
 /*==================================== GUESS NUMBER ====================================*/
 
 .guess-number {
-	padding: 40px 0;
+	padding: 180px 0 0;
 
 	&__heading {}
 
@@ -283,7 +287,7 @@ h3 {
 /*==================================== GUESS CELLS ====================================*/
 
 .cells {
-	padding: 40px 0;
+	padding: 180px 0 0;
 
 	&__heading {}
 
@@ -370,7 +374,7 @@ h3 {
 
 
 .keyboard {
-	padding: 50px 0;
+	padding: 180px 0 0;
 
 	&__inner {
 		max-width: 860px;
@@ -393,7 +397,7 @@ h3 {
 		border-radius: 5px;
 		cursor: pointer;
 		transition: all .3s;
-		
+
 		&:active {
 			transform: scale(0.8);
 			background: $hover-color;
@@ -463,7 +467,7 @@ h3 {
 /*==================================== CALENDAR ====================================*/
 
 .calendar {
-	padding: 50px 0;
+	padding: 180px 0 0;
 
 	&__heading {
 		margin-bottom: 40px;
@@ -531,7 +535,7 @@ h3 {
 
 
 .autocomplete {
-	padding: 50px 0;
+	padding: 180px 0 0;
 
 	&__heading {}
 
@@ -580,7 +584,7 @@ h3 {
 
 
 .spoiler {
-	padding: 50px 0;
+	padding: 180px 0 0;
 
 	&__heading {}
 
@@ -628,7 +632,7 @@ h3 {
 /*==================================== TABS ====================================*/
 
 .tabs {
-	padding: 50px 0;
+	padding: 180px 0 0;
 
 	&__inner {
 		margin: 0 auto;
@@ -688,7 +692,7 @@ h3 {
 /*==================================== ACCORDION ====================================*/
 
 .acc {
-	padding: 50px 0 400px;
+padding: 180px 0 400px;
 
 	&__inner {
 		margin: 0 auto;
@@ -702,6 +706,7 @@ h3 {
 			.acc__content {
 				height: 200px;
 			}
+
 			.acc__button-line--vert {
 				transform: rotate(180deg);
 			}
@@ -740,6 +745,7 @@ h3 {
 		position: relative;
 		border-radius: 50%;
 		transition: all .3s;
+
 		&:hover {
 			background: #d5d5d5;
 		}
