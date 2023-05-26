@@ -59,7 +59,7 @@ body {
 		color: $green-color;
 	}
 
-	background: $hover-color;
+	background: $green-color;
 }
 
 h3 {
@@ -86,17 +86,20 @@ h3 {
 	padding: 20px 0;
 	z-index: 3;
 	background: #fff;
-	box-shadow: 0px 0px 20px 1px #e3e3e3;
-	position: absolute;
+	// position: absolute;
 	width: 100%;
 
 	.container {
 		max-width: 1920px;
 	}
-
+	
 	&__menu {
 		height: 50px;
+		box-shadow: 0px 0px 20px 1px #e3e3e3;
 		background: $green-color;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
 	}
 
 	&__menu-list {
@@ -120,8 +123,10 @@ h3 {
 	}
 
 	&--sticky {
-		position: fixed;
-		width: 100%;
+		.header__menu {
+			top: 0;
+			position: fixed;
+		}
 	}
 }
 
@@ -132,7 +137,7 @@ h3 {
 
 
 .shapes {
-	padding: 200px 0 0 0;
+	padding: 60px 0;
 	margin-bottom: 30px;
 
 	&__heading {}
@@ -209,7 +214,7 @@ h3 {
 /*==================================== MATH ====================================*/
 
 .math {
-	padding: 180px 0 0;
+	padding: 60px 0;
 
 	&__heading {}
 
@@ -245,7 +250,7 @@ h3 {
 /*==================================== GUESS NUMBER ====================================*/
 
 .guess-number {
-	padding: 180px 0 0;
+	padding: 60px 0;
 
 	&__heading {}
 
@@ -287,7 +292,7 @@ h3 {
 /*==================================== GUESS CELLS ====================================*/
 
 .cells {
-	padding: 180px 0 0;
+	padding: 60px 0;
 
 	&__heading {}
 
@@ -374,7 +379,7 @@ h3 {
 
 
 .keyboard {
-	padding: 180px 0 0;
+	padding: 60px 0;
 
 	&__inner {
 		max-width: 860px;
@@ -400,7 +405,7 @@ h3 {
 
 		&:active {
 			transform: scale(0.8);
-			background: $hover-color;
+			background: $green-color;
 
 		}
 	}
@@ -467,7 +472,7 @@ h3 {
 /*==================================== CALENDAR ====================================*/
 
 .calendar {
-	padding: 180px 0 0;
+	padding: 60px 0;
 
 	&__heading {
 		margin-bottom: 40px;
@@ -535,7 +540,7 @@ h3 {
 
 
 .autocomplete {
-	padding: 180px 0 0;
+	padding: 60px 0;
 
 	&__heading {}
 
@@ -584,7 +589,7 @@ h3 {
 
 
 .spoiler {
-	padding: 180px 0 0;
+	padding: 60px 0;
 
 	&__heading {}
 
@@ -632,7 +637,7 @@ h3 {
 /*==================================== TABS ====================================*/
 
 .tabs {
-	padding: 180px 0 0;
+	padding: 60px 0;
 
 	&__inner {
 		margin: 0 auto;
@@ -669,8 +674,6 @@ h3 {
 	&__tab {
 		padding: 20px;
 		background: #f2f2f2;
-		// height: 300px;
-		// display: none;
 		visibility: hidden;
 		opacity: 0;
 		line-height: 1.5;
@@ -692,7 +695,7 @@ h3 {
 /*==================================== ACCORDION ====================================*/
 
 .acc {
-padding: 180px 0 400px;
+	padding: 60px 0 120px;
 
 	&__inner {
 		margin: 0 auto;

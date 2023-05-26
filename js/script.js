@@ -7,9 +7,9 @@ window.onscroll = function () { makeSticky() };
 
 let header = document.querySelector('.header');
 let main = document.querySelector('.main');
-let sticky = header.offsetTop;
+// let sticky = header.offsetTop;
 function makeSticky() {
-	if (window.pageYOffset > sticky) {
+	if (window.pageYOffset > 110) {
 		header.classList.add("header--sticky");
 		main.classList.add('main--sticky');
 	} else {

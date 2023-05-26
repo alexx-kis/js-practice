@@ -126,7 +126,7 @@ body a {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   margin-bottom: 20px;
-  background: #a980cd;
+  background: #8ad288;
 }
 .button:active {
   -webkit-transform: scale(0.9);
@@ -154,9 +154,6 @@ h3 {
   padding: 20px 0;
   z-index: 3;
   background: #fff;
-  -webkit-box-shadow: 0px 0px 20px 1px #e3e3e3;
-          box-shadow: 0px 0px 20px 1px #e3e3e3;
-  position: absolute;
   width: 100%;
 }
 .header .container {
@@ -164,7 +161,12 @@ h3 {
 }
 .header__menu {
   height: 50px;
+  -webkit-box-shadow: 0px 0px 20px 1px #e3e3e3;
+          box-shadow: 0px 0px 20px 1px #e3e3e3;
   background: #8ad288;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
 }
 .header__menu-list {
   height: 100%;
@@ -190,15 +192,15 @@ h3 {
 .header__menu-link:hover {
   color: #a980cd;
 }
-.header--sticky {
+.header--sticky .header__menu {
+  top: 0;
   position: fixed;
-  width: 100%;
 }
 
 /*==================================== SHAPES ====================================*/
 /*==================================== SHAPES ====================================*/
 .shapes {
-  padding: 200px 0 0 0;
+  padding: 60px 0;
   margin-bottom: 30px;
 }
 .shapes__tasks {
@@ -263,7 +265,7 @@ h3 {
 
 /*==================================== MATH ====================================*/
 .math {
-  padding: 180px 0 0;
+  padding: 60px 0;
 }
 .math__tasks {
   display: grid;
@@ -284,7 +286,7 @@ h3 {
 /*==================================== GUESS NUMBER ====================================*/
 /*==================================== GUESS NUMBER ====================================*/
 .guess-number {
-  padding: 180px 0 0;
+  padding: 60px 0;
 }
 .guess-number__block {
   max-width: 800px;
@@ -324,7 +326,7 @@ h3 {
 /*==================================== GUESS CELLS ====================================*/
 /*==================================== GUESS CELLS ====================================*/
 .cells {
-  padding: 180px 0 0;
+  padding: 60px 0;
 }
 .cells__rules {
   font-size: 18px;
@@ -407,7 +409,7 @@ h3 {
 /*==================================== KEYBOARD ====================================*/
 /*==================================== KEYBOARD ====================================*/
 .keyboard {
-  padding: 180px 0 0;
+  padding: 60px 0;
 }
 .keyboard__inner {
   max-width: 860px;
@@ -445,7 +447,7 @@ h3 {
   -webkit-transform: scale(0.8);
       -ms-transform: scale(0.8);
           transform: scale(0.8);
-  background: #a980cd;
+  background: #8ad288;
 }
 .keyboard__key--tab {
   width: 70px;
@@ -489,7 +491,7 @@ h3 {
 /*==================================== CALENDAR ====================================*/
 /*==================================== CALENDAR ====================================*/
 .calendar {
-  padding: 180px 0 0;
+  padding: 60px 0;
 }
 .calendar__heading {
   margin-bottom: 40px;
@@ -555,7 +557,7 @@ h3 {
 /*==================================== AUTOCOMPLETE ====================================*/
 /*==================================== AUTOCOMPLETE ====================================*/
 .autocomplete {
-  padding: 180px 0 0;
+  padding: 60px 0;
 }
 .autocomplete__inner {
   height: auto;
@@ -601,7 +603,7 @@ h3 {
 /*==================================== SPOILER ====================================*/
 /*==================================== SPOILER ====================================*/
 .spoiler {
-  padding: 180px 0 0;
+  padding: 60px 0;
 }
 .spoiler__inner {
   max-width: 800px;
@@ -637,7 +639,7 @@ h3 {
 /*==================================== TABS ====================================*/
 /*==================================== TABS ====================================*/
 .tabs {
-  padding: 180px 0 0;
+  padding: 60px 0;
 }
 .tabs__inner {
   margin: 0 auto;
@@ -687,7 +689,7 @@ h3 {
 /*==================================== ACCORDION ====================================*/
 /*==================================== ACCORDION ====================================*/
 .acc {
-  padding: 180px 0 400px;
+  padding: 60px 0 120px;
 }
 .acc__inner {
   margin: 0 auto;
@@ -800,6 +802,14 @@ h3 {
 }
 /*==================================== 1000 ====================================*/
 @media (max-width: 1000px) {
+  .container {
+    padding: 0 30px;
+  }
+  .header {
+    position: fixed;
+    -webkit-box-shadow: 0px 0px 20px 1px #e3e3e3;
+            box-shadow: 0px 0px 20px 1px #e3e3e3;
+  }
   .header__menu {
     position: fixed;
     top: 0;
@@ -832,7 +842,7 @@ h3 {
     height: 50px;
     line-height: 50px;
   }
-  .main--sticky {
+  .main {
     padding-top: 90px;
   }
   .burger {
@@ -898,9 +908,6 @@ h3 {
   .overlay--show {
     visibility: visible;
     opacity: 1;
-  }
-  .container {
-    padding: 0 30px;
   }
 }
 /*==================================== 900 ====================================*/
